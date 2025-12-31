@@ -1,0 +1,12 @@
+body{
+    margin:0;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /*width: 800px; 16 divs * 50px */
+}
+
+.container div {
+    box-sizing: border-box;
+}

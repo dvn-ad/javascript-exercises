@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <h1>Rock, Paper, Scissor?</h1>
+
+    <style type="text/css">
+      .tg {
+        border-collapse: separate;
+        border-spacing: 40px 10px;
+      }
+      .tg td {
+        border: none;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        overflow: hidden;
+        padding: 10px 5px;
+        word-break: normal;
+      }
+      .tg th {
+        border: none;
+
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        font-weight: normal;
+        overflow: hidden;
+        padding: 10px 5px;
+        word-break: normal;
+      }
+      .tg .tg-0lax {
+        text-align: center;
+        vertical-align: top;
+      }
+    </style>
+    <table class="tg">
+      <thead>
+        <tr>
+          <th class="tg-0lax"><b>You</b></th>
+          <th class="tg-0lax"><b>AI</b></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tg-0lax" id="scoreHuman">0</td>
+          <td class="tg-0lax" id="scoreAI">0</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <input id="humanChoice" placeholder="i.e. rock" />
+    <div id="result"></div>
+  </body>
+</html>

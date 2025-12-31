@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping list example</title>
+    <style>
+      li {
+        margin-bottom: 10px;
+      }
+
+      li button {
+        font-size: 12px;
+        margin-left: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>My shopping list</h1>
+
+    <form>
+      <label for="item">Enter a new item:</label>
+      <input type="text" name="item" id="item">
+      <button>Add item</button>
+    </form>
+
+    <ul>
+
+    </ul>
+
+    <script>
+        const input=document.querySelector("input");
+        const ul=document.querySelector("ul");
+        const button=document.querySelector("button");
+        button.addEventListener("click", (event) => {
+            event.preventDefault();
+            const newLine = document.createElement("li");
+            const inputValue = input.value;
+            input.value="";
+            const deleteButton = document.createElement("button");
+            deleteButton.textContent = "delete";
+            newLine.textContent = inputValue;
+            newLine.appendChild(deleteButton);
+            deleteButton.addEventListener("click", (e)=> {
+                ul.removeChild(newLine);
+            })
+
+            ul.appendChild(newLine);
+            input.focus(); 
+            /* input.focus() is used to automatically place the cursor back into the text input field after an item has been added to the list. Without this line, after clicking the "Add item" button, the focus would remain on the button itself. */
+        })
+
+    </script>
+  </body>
+</html>
